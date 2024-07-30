@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="Contact-form.css" />
+    <title>Frontend Mentor | Contact form</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="parent">
+      <h2>Contact Us</h2>
+      <div class="firstchild">
+        <form action="/action_page.php">
+          
+          <label for="fname" style="font-size: 16px">First name*</label><br />
+          <input
+            type="text"
+            id="fnmae"
+            name="fname"
+            value=""
+            style="border-radius: 5px; height: 30px"
+            required
+          /><br />
+          <script>
+            function validateForm() {
+              let x = document.forms["myform"]["fname"].value;
+              if (x == "") {
+                alert("This field is required");
+                return false;
+              }
+            }
+          </script>
+          <!-- This field is required -->
+
+          <label for="lname" style="font-size: 16px"> Last Name* </label><br />
+          <input
+            type="text"
+            id="lname"
+            name="lname"
+            value=""
+            style="border-radius: 5px; height: 30px"
+          />
+        </form>
+      </div>
+
+      <!-- This field is required -->
+
+      <label for="email" style="line-height: 2; font-size: 16px"
+        >Email Address*</label
+      ><br />
+      <input
+        type="text"
+        id="email"
+        name="email"
+        value=""
+        style="border-radius: 5px; height: 30px"
+      /><br />
+
+      <!-- Please enter a valid email address This field is required -->
+
+      <label for="query" style="line-height: 2; font-size: 16px"
+        >Query Type*</label
+      ><br />
+
+      <button class="button">
+        <input
+          type="radio"
+          id="general enquiry"
+          name="query_type"
+          value="General Enquiry"
+        />
+        <label for="general enquiry" style="font-size: 16px"
+          >General Enquiry</label
+        >
+      </button>
+
+      <button class="button">
+        <input
+          type="radio"
+          id="support request"
+          name="query_type"
+          value="Support request"
+        />
+        <label for="Support Request" style="font-size: 16px"
+          >Support Request</label
+        >
+      </button>
+      <!-- select a query type -->
+
+      <label for="Message" style="line-height: 2; font-size: 16px"
+        >Message</label
+      >
+      <textarea id="freeform" name="freeform" maxlength="500">
+Enter text</textarea
+      >
+      <input type="checkbox" id="consent" name="consent" />
+      <label for="checkbox" id="consent" name="consent">
+        <p>
+          I consent to being contacted by the team.<span
+            style="color: hsl(155, 43%, 34%)"
+            >*</span
+          >
+        </p></label
+      >
+
+      <button class="green">Submit</button>
+
+      <!-- This field is required I consent to being contacted by the team To submit
+      this form, please consent to being contacted Submit Message Sent! Thanks
+      for completing the form. We'll be in touch soon! -->
+    </div>
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
